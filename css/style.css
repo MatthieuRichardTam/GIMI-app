@@ -1,0 +1,340 @@
+/*Bannière*/
+:root {
+  --chu-color: rgb(0, 72, 153);
+}
+
+/*La couleur bleue à utiliser est rgb(0, 72, 153)*/
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins";
+}
+
+.body_log_in {
+  background-color: var(--chu-color);
+}
+
+.header {
+  padding: 10px 15px;
+  background-color: var(--chu-color);
+  display: flex;
+  flex-direction: row;
+}
+
+#logo {
+  height: 75px;
+}
+
+#txt_banniere {
+  padding-left: 20px;
+  height: 75px;
+  color: white;
+  margin: 0;
+}
+
+/* Affichage global*/
+
+.super_container {
+  display: flex;
+  background-color: red;
+  align-items: top;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/*Affichage des boutons*/
+
+.grp_buttons {
+  background-color: #f8f9fa;
+  padding-right: 20px;
+  width: 225px;
+}
+
+/* .button {
+  display: inline-block;
+  padding: 12px 0;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #6c757d;
+  border: none;
+  border-radius: 15px;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  background-color: #5a6268;
+  transition: all 0.3s;
+}
+
+.button:active {
+  background-color: #495057;
+}
+
+.button-active {
+  background-color: var(--chu-color);
+}
+
+.button-active:hover {
+  background-color: var(--chu-color);
+  transition: all 0.3s;
+} */
+
+/* Affichage des alarmes*/
+.patients-list {
+  width: 100%;
+  /*max-height: 810px;*/
+
+  margin: 0 auto;
+  overflow-y: auto;
+  background-color: white;
+  padding: 10px;
+}
+
+.patient {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  padding: 0;
+  background-color: #f0f0f085;
+  border-radius: 5px;
+  height: 80px;
+}
+
+.patient-infos{
+  width: 20%;
+}
+
+.patient-details-button{
+  width: 20%;
+  padding: 5px;
+}
+
+.injections-list {
+  width: 100%;
+  /*max-height: 810px;*/
+
+  margin: 0 auto;
+  overflow-y: auto;
+  background-color: white;
+  padding: 10px;
+}
+
+.injection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  padding: 0 10px;
+  background-color: #f0f0f085;
+  border-radius: 5px;
+  min-height: 80px;
+}
+
+.legend {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f0f0f085;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.legend p {
+  font-size: 25px;
+  margin: 5px;
+  color: rgb(61, 61, 61);
+}
+
+.details {
+  width: 250px;
+}
+
+.details h2 {
+  margin: 0;
+  margin-bottom: 5px;
+  color: #456990;
+}
+
+.details p {
+  margin: 0;
+  color: #456990;
+}
+
+.therapeutic-infos {
+  width: 250px;
+  margin-left: 20px;
+  color: #456990;
+}
+
+/*Affichage des barres de progression */
+.progress {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  flex-direction: column;
+}
+.progress-time {
+  text-align: center;
+  padding-bottom:5px;
+  font-size: 20px;
+  margin: 0;
+}
+.progress-bar-container {
+  background-color: #d1d8e0;
+  height: 50%;
+  width: 100%;
+  border-radius: 25%;
+  align-items: center;
+}
+.progress-bar-message {
+  padding-top: 5px;
+  text-align: center;
+  justify-content: space-around;
+  font-weight: bold;
+  align-self: center;
+  font-size: 25px;
+}
+.condensed-injections-list{
+  width: 60%;
+  height: 100px;
+  justify-content: space-around;
+}
+.not-started {
+  background: var(--chu-color);
+}
+
+.minor-priority {
+  background: #20bf6b;
+}
+
+.moderate-priority {
+  background: #f7b731;
+}
+
+.severe-priority {
+  background: #eb3b5a;
+}
+
+.empty {
+  animation: blink 1s linear infinite;
+  background: #eb3b5a;
+}
+
+.failure {
+  animation: blink 1s linear infinite;
+  background: #eb3b5a;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 100%;
+  }
+  49% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+}
+/*Voir dans les balises <style> dans le doc CSS*/
+
+textarea {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+}
+h1 {
+  color: #333;
+  text-align: center;
+}
+select {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+/* button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+} */
+/* button:hover {
+  background-color: #0056b3;
+} */
+.result {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.alert {
+  border: 1px solid #ffc107;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #fff8e1;
+  color: #856404;
+  border-radius: 4px;
+}
+
+.bg-primary{
+  background-color: var(--chu-color);
+}
+.bg-secondary{
+  background-color: #C6D8FF;
+}
+
+.bttn-details-inactive{
+  background-color: rgb(249 250 251);
+}
+.bttn-details-inactive:hover{
+  background-color: rgb(156 163 175);
+}
+.bttn-details-active{
+  background-color: var(--chu-color);
+}
+.bttn-details-active:hover{
+  background-color: #C6D8FF;
+  color: black;
+}
+
+.bttn-add-patient{
+  border: 4px solid #C6D8FF;
+  border-radius: 30px;
+}
+
+.bttn-add-patient:hover{
+  background-color: #C6D8FF;
+}
+
