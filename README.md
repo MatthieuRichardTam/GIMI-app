@@ -1,82 +1,89 @@
-# GIMI - Gestion Intelligente des Médicaments Injectables
+# GIMI - Intelligent Management of Injectable Medications
 
 ## Description
-GIMI est une application web développée pour améliorer la gestion des perfusions médicamenteuses dans les services hospitaliers. Ce projet a été mené par 12 étudiants de l'École Centrale de Lille en collaboration avec le CHU de Lille et le laboratoire CRIStAL. L'objectif est de réduire les nuisances sonores liées aux alarmes et de limiter les incompatibilités médicamenteuses lors d'injections multiples.
+GIMI is a web application designed to improve the management of medication infusions in hospital settings. This project was developed by 12 students from École Centrale de Lille in collaboration with CHU de Lille and the CRIStAL laboratory. The goal is to reduce noise disturbances caused by alarms and to limit medication incompatibilities during multiple injections.
 
-## Fonctionnalités principales
+## Key Features
 
-### 1. Réduction des alarmes
-- **Tableau de bord des injections** : Visualisation en temps réel des perfusions en cours, hiérarchisées par priorité (couleurs : vert, jaune, rouge, blanc, bleu).
-- **Notifications proactives** : Alertes sur les fins d'injection imminentes.
+### 1. Alarm Reduction
+- **Injection Dashboard**: Real-time visualization of ongoing infusions, prioritized by color (green, yellow, red, white, blue).
+- **Proactive Notifications**: Alerts for imminent injection completions.
 
-### 2. Gestion des incompatibilités médicamenteuses
-- **Test de compatibilité** : Vérification des interactions potentielles entre plusieurs médicaments.
-- **Avertissements en cas d'incompatibilité** : Signalisation lors de l'ajout d'une injection incompatible.
+### 2. Management of Medication Incompatibilities
+- **Compatibility Test**: Verification of potential interactions between multiple medications.
+- **Incompatibility Warnings**: Alerts when adding an incompatible injection.
 
-## Installation et configuration
+## Installation and Configuration
 
-### Prérequis
-- [XAMPP](https://www.apachefriends.org/fr/index.html) (serveur Apache et MySQL).
+### Prerequisites
+- [XAMPP](https://www.apachefriends.org/index.html) (Apache and MySQL server).
 
-### Étapes d'installation
+### Installation Steps
 
-#### 1. Installer XAMPP
-- Télécharger et installer XAMPP.
-- Lancer Apache et MySQL depuis le panneau de contrôle de XAMPP.
+#### 1. Install XAMPP
+- Download and install XAMPP.
+- Start Apache and MySQL from the XAMPP control panel.
 
-#### 2. Configurer les fichiers de l'application
-- Copier les fichiers du projet dans `C:\xampp\htdocs\GIMI`.
+#### 2. Configure Application Files
+- Copy the project files to `C:\xampp\htdocs\GIMI`.
 
-#### 3. Initialiser la base de données
-- Accéder à [phpMyAdmin](http://localhost/phpmyadmin).
-- Créer une base de données nommée `gimi`.
-- Importer le fichier `gimi.sql` situé dans `assets`.
-#### 4. Lancer l'application
-- Ouvrir un navigateur et accéder à `http://localhost/GIMI`.
-- Utiliser les identifiants définis dans la table `users` pour se connecter.
+#### 3. Initialize the Database
+- Open [phpMyAdmin](http://localhost/phpmyadmin).
+- Create a database named `gimi`.
+- Import the `gimi.sql` file located in `assets`.
 
-## Structure technique
+#### 4. Launch the Application
+- Open a browser and go to `http://localhost/GIMI`.
+- Use the credentials defined in the `users` table to log in.
+
+## Technical Structure
 
 ### Front-End
-- Langages : HTML, CSS (via Tailwind), JavaScript (AJAX).
-- Composants réutilisables : `head.php`, `sidebar.php`, etc.
+- Languages: HTML, CSS (via Tailwind), JavaScript (AJAX).
+- Reusable components: `head.php`, `sidebar.php`, etc.
 
 ### Back-End
-- Langages : PHP, SQL.
-- Programmation orientée objet : Classes `Patient`, `Injection`, et `PdoMySQL`.
+- Languages: PHP, SQL.
+- Object-Oriented Programming: Classes such as `Patient`, `Injection`, and `PdoMySQL`.
 
-### Base de données
-- Tables principales :
-  - `users` : Gestion des utilisateurs.
-  - `patients` : Informations sur les patients.
-  - `injections` : Données des perfusions.
-  - `compatibilities` : Gestion des compatibilités médicamenteuses.
+### Database
+- Key tables:
+  - `users`: User management.
+  - `patients`: Patient information.
+  - `injections`: Infusion data.
+  - `compatibilities`: Management of medication compatibilities.
 
-## Captures d'écran et explication des pages
+## Screenshots and Page Descriptions
 
-### Page de connexion
-![Page de connexion](screenshots/login_page.png)
-La page de connexion permet aux utilisateurs de s'authentifier avec leur nom d'utilisateur et mot de passe. Une fois connectés, ils sont redirigés vers le tableau de bord principal.
+### Login Page
+![Login Page](screenshots/login_page.png)
+The login page allows users to authenticate with their username and password. Once logged in, they are redirected to the main dashboard.
 
-### Tableau de bord
-![Tableau de bord](screenshots/dashboard.png)
-Le tableau de bord présente les perfusions en cours, classées par priorité. Les patients avec des perfusions urgentes apparaissent en haut de la liste. Les injections sont colorées selon leur statut :
-- **Vert** : Injection récemment commencée.
-- **Jaune** : Injection proche de sa fin.
-- **Rouge** : Injection nécessitant une intervention immédiate.
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+The dashboard displays ongoing infusions, prioritized by urgency. Patients with critical infusions appear at the top of the list. Injections are color-coded based on their status:
+- **Green**: Recently started injection.
+- **Yellow**: Injection nearing completion.
+- **Red**: Injection requiring immediate attention.
 
-### Page de test de compatibilité
-![Test de compatibilité](screenshots/compatibility_page.png)
-Cette page permet de vérifier les incompatibilités entre plusieurs médicaments. Les utilisateurs sélectionnent les médicaments via un menu déroulant, et le système affiche les incompatibilités détectées.
+### Compatibility Test Page
+![Compatibility Test](screenshots/compatibility_page.png)
+This page allows users to check for incompatibilities between multiple medications. Users select medications from a dropdown menu, and the system displays any detected incompatibilities.
 
-### Page d'ajout de patients
-![Ajout de patients](screenshots/add_patient.png)
-Cette page permet d'ajouter de nouveaux patients à la base de données. Les utilisateurs renseignent le nom, prénom, date de naissance, chambre et lit du patient.
+### Add Patient Page
+![Add Patient](screenshots/add_patient.png)
+This page enables users to add new patients to the database. Users input details such as the patient's name, birth date, room, and bed.
 
-### Page d'ajout d'injections
-![Ajout d'injections](screenshots/add_injection.png)
-Les utilisateurs peuvent ajouter des injections pour un patient en précisant les détails tels que le médicament, le dosage, et le débit. Le système vérifie automatiquement les incompatibilités potentielles.
+### Add Injection Page
+![Add Injection](screenshots/add_injection.png)
+Users can add injections for a patient by specifying details such as the medication, dosage, and flow rate. The system automatically checks for potential incompatibilities.
 
-### Page des notifications
-![Page des notifications](screenshots/notifications.png)
-Cette page affiche les injections les plus urgentes, nécessitant une intervention immédiate. Les soignants peuvent prendre en charge une alarme et finaliser son traitement une fois terminé.
+### Notifications Page
+![Notifications Page](screenshots/notifications.png)
+This page displays the most urgent injections requiring immediate intervention. Healthcare professionals can take charge of an alert and mark it as resolved after completing the necessary actions.
+
+## Authors
+- Developed by 12 students from École Centrale de Lille.
+- Supervised by CHU de Lille
+
+
