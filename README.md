@@ -56,30 +56,30 @@ GIMI is a web application designed to improve the management of medication infus
 ## Screenshots and Page Descriptions
 
 ### Login Page
-![Login Page](screenshots/login_page.png)
+![Login Page](screenshots/GIMI_authentification.png)
 The login page allows users to authenticate with their username and password. Once logged in, they are redirected to the main dashboard.
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/GIMI_dashboard.png)
 The dashboard displays ongoing infusions, prioritized by urgency. Patients with critical infusions appear at the top of the list. Injections are color-coded based on their status:
 - **Green**: Recently started injection.
 - **Yellow**: Injection nearing completion.
 - **Red**: Injection requiring immediate attention.
 
 ### Compatibility Test Page
-![Compatibility Test](screenshots/compatibility_page.png)
+![Compatibility Test](screenshots/GIMI_compatibility.png)
 This page allows users to check for incompatibilities between multiple medications. Users select medications from a dropdown menu, and the system displays any detected incompatibilities.
 
 ### Add Patient Page
-![Add Patient](screenshots/add_patient.png)
+![Add Patient](screenshots/GIMI_patient.png)
 This page enables users to add new patients to the database. Users input details such as the patient's name, birth date, room, and bed.
 
 ### Add Injection Page
-![Add Injection](screenshots/add_injection.png)
+![Add Injection](screenshots/GIMI_injection.png)
 Users can add injections for a patient by specifying details such as the medication, dosage, and flow rate. The system automatically checks for potential incompatibilities.
 
 ### Notifications Page
-![Notifications Page](screenshots/notifications.png)
+![Notifications Page](screenshots/GIMI_notification.png)
 This page displays the most urgent injections requiring immediate intervention. Healthcare professionals can take charge of an alert and mark it as resolved after completing the necessary actions.
 
 ## Authors
