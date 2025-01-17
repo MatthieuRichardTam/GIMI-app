@@ -3,6 +3,7 @@
 ## Description
 GIMI is a web application designed to improve the management of medication infusions in hospital settings. This project was developed by 12 students from École Centrale de Lille in collaboration with CHU de Lille and the CRIStAL laboratory. The goal is to reduce noise disturbances caused by alarms and to limit medication incompatibilities during multiple injections.
 
+*Note: The codes related to handling medication incompatibilities are not present in this repository, as clients preferred to keep this information confidential.*
 ## Key Features
 
 ### 1. Alarm Reduction
